@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.0",
-    "vite": "^3.2.3",
+    "vite": "^4.3.9",
     "vite-plugin-rsw": "^2.0.11"
   }
 }
