@@ -18,7 +18,7 @@ impl Plugin for LoadingPlugin {
             )
             .add_dynamic_collection_to_loading_state::<_, StandardDynamicAssetCollection>(
                 GameState::Loading,
-                "/crates/sketch_x/assets/manifest.assets.ron",
+                "/bevy_sketches/sketch_x/manifest.assets.ron",
             )
             .add_collection_to_loading_state::<_, LoadedAssets>(GameState::Loading);
     }
