@@ -28,6 +28,7 @@ bevy = { version = "0.10", default-features = false, features = [
   "bevy_winit",
   "bevy_render",
   "bevy_sprite",
+  "bevy_pbr",
   "png",
   "x11",
 ] }
@@ -42,6 +43,7 @@ async-std = "1.12.0"
 wasm-bindgen = "0.2.87"
 wasm-bindgen-futures = "0.4.37"
 console_error_panic_hook = "0.1.7"
+bevy_shader_utils = "0.3.0"
 
 [build-dependencies]
 embed-resource = "1.4"

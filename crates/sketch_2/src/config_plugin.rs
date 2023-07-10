@@ -29,12 +29,16 @@ pub struct ConfigPlugin;
 impl Plugin for ConfigPlugin {
     fn build(&self, app: &mut App) {
         app.insert_resource(Msaa::Sample4)
-            .insert_resource(ClearColor(Color::rgb(0.4, 0.4, 0.4)))
+            .insert_resource(ClearColor(Color::rgb(0.33, 0.26, 0.33)))
+            .insert_resource(AmbientLight {
+                color: Color::WHITE,
+                brightness: 1.0 / 5.0,
+            })
             .add_plugins(
                 DefaultPlugins
                     .set(WindowPlugin {
                         primary_window: Some(Window {
-                            title: "bevy_trunk_template".to_string(),
+                            title: "bevy_sketch".to_string(),
                             canvas: Some("#bevy".to_owned()),
                             fit_canvas_to_parent: true,
                             present_mode: PresentMode::AutoVsync,
@@ -93,7 +97,7 @@ fn debug_toggle_system(input: Res<Input<KeyCode>>, mut debug_options: ResMut<Deb
     }
 }
 
-pub fn get_world_position(
+pub fn _get_world_position(
     raw_position: Vec2,
     window: &Window,
     camera_transform: &GlobalTransform,

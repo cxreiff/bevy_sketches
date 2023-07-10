@@ -66,7 +66,7 @@ fn update(time: Res<Time>, mut materials: ResMut<Assets<VertexNoiseMaterial>>) {
 
 impl Material for VertexNoiseMaterial {
     fn vertex_shader() -> ShaderRef {
-        "/bevy_sketches/sketch_1/shaders/vertex_noise_shader.wgsl".into()
+        "/bevy_sketches/sketch_2/shaders/vertex_noise_shader.wgsl".into()
     }
 }
 

@@ -34,7 +34,7 @@ impl Plugin for ConfigPlugin {
                 DefaultPlugins
                     .set(WindowPlugin {
                         primary_window: Some(Window {
-                            title: "bevy_trunk_template".to_string(),
+                            title: "bevy_sketch".to_string(),
                             canvas: Some("#bevy".to_owned()),
                             fit_canvas_to_parent: true,
                             present_mode: PresentMode::AutoVsync,
