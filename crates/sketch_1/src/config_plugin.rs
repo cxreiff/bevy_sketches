@@ -29,7 +29,7 @@ pub struct ConfigPlugin;
 impl Plugin for ConfigPlugin {
     fn build(&self, app: &mut App) {
         app.insert_resource(Msaa::Sample4)
-            .insert_resource(ClearColor(Color::rgb(0.4, 0.4, 0.4)))
+            .insert_resource(ClearColor(Color::rgb(0.33, 0.26, 0.33)))
             .insert_resource(AmbientLight {
                 color: Color::WHITE,
                 brightness: 1.0 / 5.0,
@@ -48,14 +48,7 @@ impl Plugin for ConfigPlugin {
                         ..default()
                     })
                     .set(ImagePlugin::default_nearest()),
-                // .set(RenderPlugin {
-                // wgpu_settings: WgpuSettings {
-                // features: WgpuFeatures::POLYGON_MODE_LINE,
-                // ..Default::default()
-                // },
-                // }),
             );
-        // .add_plugin(WireframePlugin);
 
         #[cfg(debug_assertions)]
         {
