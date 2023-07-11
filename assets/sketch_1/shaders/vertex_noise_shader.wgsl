@@ -50,7 +50,7 @@ fn vertex(vertex: Vertex) -> VertexOutput {
 
     var t = material.time.x;
 
-    var noise = perlinNoise3(vec3<f32>(vertex.position.x * 1.4, (vertex.position.y + (t / 8.0)), vertex.position.z * 1.9));
+    var noise = perlinNoise3(vec3<f32>(vertex.position.x * 1.4, (vertex.position.y + (t / 2.0)), vertex.position.z * 1.9));
 
     out.color = vec4<f32>(noise * 0.15, noise * 0.2 + 0.07, noise * 0.2 + 0.1, 1.0);
 

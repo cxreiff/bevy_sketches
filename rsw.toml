@@ -16,3 +16,7 @@ name = "sketch_1"
 root = "crates"
 name = "sketch_2"
 
+[[crates]]
+root = "crates"
+name = "sketch_3"
+
