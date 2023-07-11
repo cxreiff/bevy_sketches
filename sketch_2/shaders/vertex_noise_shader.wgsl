@@ -49,12 +49,11 @@ fn vertex(vertex: Vertex) -> VertexOutput {
 
     var t = material.time.x;
 
-    var noise = simplexNoise3(vec3<f32>(vertex.position.x, vertex.position.y + (t / 8.0), vertex.position.z - (t * 2.0)));
+    var noise = simplexNoise3(vec3<f32>(vertex.position.x, vertex.position.y, vertex.position.z - (t * 2.0)));
 
-    out.color = vec4<f32>(noise * 0.8, noise * 0.5 + 0.3, noise * 0.4 + 0.4, 1.0);
+    out.color = vec4<f32>(noise * 0.8, noise * 0.4 + 0.4, noise * 0.5 + 0.3, 1.0);
 
-    out.world_position = mesh_position_local_to_world(mesh.model, vec4<f32>(vertex.position.x, noise * 0.3, vertex.position.z, 1.0));
-    out.world_position.y = out.world_position.y - 4.0 * sin(t - out.world_position.z) / 20.0;
+    out.world_position = mesh_position_local_to_world(mesh.model, vec4<f32>(vertex.position.x, noise, vertex.position.z, 1.0));
 
     out.clip_position = mesh_position_world_to_clip(out.world_position);
 
