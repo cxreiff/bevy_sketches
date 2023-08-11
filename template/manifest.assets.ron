@@ -1,0 +1,5 @@
+({
+    "textures.kitty": File (
+        path: "/bevy_sketches/sketch_x/textures/kitty.png",
+    ),
+})
